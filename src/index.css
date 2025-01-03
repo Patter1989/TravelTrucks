@@ -1,14 +1,14 @@
-body {
-  background-color: #1e2336;
+/* /* body {
+  background-color: #fff;
   margin: 0;
   display: flex;
+  box-sizing: border-box;
   /* max-width: 1440px; */
   /* place-items: center; */
   /* min-width: 320px;
   min-height: 100vh; */
-}
+/* } */
 main{
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,40 @@ main{
   
 }
 
-#root{
-  width: 100%;
-  
+
+  :root {
+  --main: #101828;
+  --text: #475467;
+  --badges: #F7F7F7;
+  --background: #FFFFFF;
+  --main-white: #ffffff;
+  --font: "Inter";
+}
+
+
+body {
+  color: var(--text);
+  font-family: var(--font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }

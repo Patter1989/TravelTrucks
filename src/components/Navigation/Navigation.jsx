@@ -11,6 +11,13 @@ const Navigation = () => {
 			<nav className={css.nav}>
 				<NavLink
 					to='/'
+					className={css.logo}
+				>
+					Travel
+					<span className={css.logoSp}>Trucks</span>
+				</NavLink>
+				<NavLink
+					to='/'
 					className={buildLinkClass}
 				>
 					Home
@@ -19,7 +26,7 @@ const Navigation = () => {
 					to='/Movies'
 					className={buildLinkClass}
 				>
-					Movies
+					Catalog
 				</NavLink>
 			</nav>
 		</div>

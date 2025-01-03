@@ -1,11 +1,23 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import css from "./MoviesPage.module.css"
-import { requestMovieByQuery } from "../../services/api";
+import { requestMovieByQuery, requestTopMoviesList } from "../../services/api";
 import MovieList from "../../components/MovieList/MovieList";
 import { useSearchParams } from "react-router-dom";
 
 const MoviesPage = () => {
+	const [topRatedMovies, setTopRatedMovies] = useState([]);
+	useEffect(() => {
+		async function fetchTopRatedMovies() {
+			try {
+				const response = await requestTopMoviesList();
+				setTopRatedMovies(response.data.results);
+			} catch (err) {
+				toast.error(`Error fetching movies: ${err.message}`);
+			}
+		}
+		fetchTopRatedMovies();
+	}, []);
 	const [movieList, setMovieList] = useState([]);
 		const [searchParams, setSearchParams] = useSearchParams();
 	const query = searchParams.get("query");
@@ -60,8 +72,9 @@ const MoviesPage = () => {
 					>
 						Search
 					</button>
-        </form>
-        <MovieList  moviesList={movieList}/>
+				</form>
+				<MovieList moviesList={topRatedMovies} />
+				<MovieList moviesList={movieList} />
 			</div>
 		);
 }

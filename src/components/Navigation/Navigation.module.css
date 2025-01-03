@@ -1,31 +1,41 @@
 .nav{
-  
-  height: 35px;
-  padding-top: 5px;
+  width: 100%;
+  padding: 28px 64px;
   display: flex;
+  align-items: center;
+  gap: 32px;
   justify-content: center;
-  background-color: rgb(12, 12, 39);
-  box-shadow: 5px 5px 25px 15px rgb(12, 12, 39);
-  
+  background-color: #fff;
 }
 
 .NavLink{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 30px;
-  font-weight: 800;
-  font-size: 18px;
-  /* border: 1px solid black; */
-  /* border-radius: 8px; */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   text-decoration: none;
-  background-color: rgb(92, 91, 91);
-  color: rgb(247, 99, 0);
   transition: all 0.3s;
+  color: #101828;
 }
 
 .linkActive {
-  background-color: rgb(247, 99, 0);
-  color: rgb(92, 91, 91);
+  color: #D84343;
+}
+
+.logo{
+  position: absolute;
+  top: 28px;
+  left: 64px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #101828;
+}
+
+.logoSp{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #6C717B;
 }
